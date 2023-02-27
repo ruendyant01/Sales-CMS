@@ -1,5 +1,7 @@
 <?php
 
+
+//checkout features
 session_start();
 
 require 'config/connection.php';
