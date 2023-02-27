@@ -1,0 +1,380 @@
+:root {
+    --custom-blue: #0d6efd;
+    --custom-blue-2:rgb(209, 228, 253);
+}
+
+html {
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 1rem;
+    background-color: lightgrey;
+    font-size: 1.6rem;
+    display: flex;
+    height: 94vh;
+}
+
+section,form {
+    background-color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 70%;
+    margin-right: 2rem;
+}
+
+.search-bar {
+    flex-basis: 15%;
+    margin-bottom: 2rem;
+    padding: 3rem;
+    position: relative;
+    display: flex;
+}
+
+input {
+    flex-basis: 80%;
+    font-size: 1.6rem;
+    outline: none;
+    border: 1px solid lightgrey;
+}
+
+.search__result {
+    position: absolute;
+    top: 80%;
+    left: 12%;
+    background-color: white;
+}
+
+.product__item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    text-decoration: none;
+    color: black;
+}
+.product__item--text {
+    display: flex;
+    flex-direction: column;
+    line-height: 0;
+}
+
+.total {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+    height: 80%;
+    padding: 1.5rem 0;
+}
+
+.product-list {
+    padding: 1rem 0;
+    flex-basis: 85%;
+    height: 100%;
+}
+
+.pens-icon {
+    color: white;
+    font-size: 1.7rem;
+}
+
+.icon-container {
+    padding: .5rem;
+}
+
+.pens {
+    background-color: var(--custom-blue);
+    border-top-left-radius: .7rem;
+    border-bottom-left-radius: .7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 8%;
+}
+
+.cart {
+    background-color: lightgreen;
+    display: flex;
+    flex-basis: 12%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: green;
+    border: none;
+    cursor: pointer;
+}
+
+.cart::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 3px;
+    background-color: var(--custom-blue);
+}
+
+.cart-icon {
+    margin-right: .5rem;
+}
+
+.sale-text {
+    font-size: 1.6rem;
+}
+
+table thead {
+    background-color: var(--custom-blue-2);
+}
+
+table thead tr {
+    font-size: 1.6rem;
+    line-height: 4.5rem;
+}
+table tbody tr {
+    vertical-align: top;
+}
+table tbody tr td {
+    padding: 1.5rem;
+}
+
+.fixed_table table {
+    table-layout: fixed;
+    width: 100%;
+    border-width: 0;
+    padding: 0;
+    border-collapse: collapse;
+  }
+  
+  .fixed_table .body {
+    overflow-y: scroll;
+    padding-bottom: 0.8em;
+    height: 20em ;
+  }
+  
+.total__heading {
+    background-color: var(--custom-blue-2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.total__heading p {
+    color: grey;
+    line-height: 0;
+}
+
+.total__heading span {
+    color: var(--custom-blue);
+}
+
+.total__price {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.total__price div {
+    padding: 0 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.total__price div h4 {
+    line-height: 0;
+}
+
+.price {
+    align-self: center;
+    font-size: 4rem;
+    margin: 0;
+    margin-top: 2rem;
+}
+
+.title {
+    color: gray;
+    font-size: 2.5rem;
+}
+
+.total__price--total {
+    color: lightgreen;
+}
+
+.total__price--amount {
+    color: orange;
+}
+
+.total__payment {
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.total__payment p {
+    color: gray;
+}
+
+.total__payment div {
+    display: flex;
+    flex-wrap: wrap;
+}
+.total__payment div * {
+    margin: .4rem;
+}
+
+.total__payment div div {
+    position: relative;
+}
+
+input[type="radio"] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -10;
+    width: 2rem;
+    height: 2rem;
+  }
+  
+label {
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    background-color: #454545;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.search__back {
+    font-size: 3rem;
+    height: 8rem;
+    width: 8rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 50;
+}
+
+.cross {
+    font-size: 5rem;
+    color: red;
+}
+
+input[type="radio"]:checked + label{
+    background-color: #58ba83;
+}
+
+.total__checkout {
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+}
+
+.total__checkout input {
+    font-weight: bold;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.8rem;
+    border: 1px solid lightgray;
+}
+
+.total__checkout button {
+    background-color: var(--custom-blue);
+    color: white;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1.5rem 4rem;
+    font-weight: 500;
+    border: none;
+}
+
+textarea {
+    margin: 1rem;
+    border: 1px solid lightgray;
+    padding: .6rem;
+    font-size: 1.6rem;
+}
+
+#popup {
+    background-color: blue;
+}
+
+.item__detail {
+    display: flex;
+    flex-direction: column;
+    line-height: 0;
+    white-space: nowrap;
+    width: 80%
+}
+
+.item__detail .detail {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.item__detail .detail * {
+    margin: .5rem;
+}
+
+.item__detail .item__title {
+    width: 100%;
+}
+
+.transaction__result {
+    position: fixed;
+    background-color: white;
+    width: 30%;
+    padding: 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: .3rem .3rem .7rem rgba(0, 0, 0, 0.521);
+    z-index: 100;
+}
+
+.transaction__result tr {
+    border-bottom: 1px solid lightgray;
+}
+
+.transaction__result h1 {
+    font-size: 4rem;
+    margin-top: -1.5rem;
+}
+
+.transaction__result--products {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.error {
+    color: red;
+    font-size: 1.8rem;
+}
+
+.transaction__result--list {
+    font-size: 1.8rem;
+    color: gray;
+}
+
+#modal-button {
+    background-color: transparent;
+    border: none;
+    display: inline-block;
+    text-align: right;
+    width: 100%;
+    cursor: pointer;
+}
+
+.sub-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
